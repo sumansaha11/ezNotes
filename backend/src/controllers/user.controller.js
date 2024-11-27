@@ -5,7 +5,7 @@ import { ApiError } from "../utils/ApiError.js";
 import { User } from "../models/user.model.js";
 
 const options = {
-    sameSite: 'Strict',
+    sameSite: 'None',
     path: '/',
     secure: true,
 };
