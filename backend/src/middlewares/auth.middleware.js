@@ -18,7 +18,7 @@ const verifyJWT = asyncHandler(async (req, res, next) => {
         }
 
         // Fetch user from database
-        const user = await User.findById(decodedToken._id).select("-password -refreshToken");
+        const user = await User.findById(decodedToken?._id).select("-password -refreshToken");
         if (!user) {
             throw new ApiError(401, "Invalid access token! User not found.");
         }
@@ -29,7 +29,7 @@ const verifyJWT = asyncHandler(async (req, res, next) => {
         if (error.name === "JsonWebTokenError" || error.name === "TokenExpiredError") {
             throw new ApiError(401, "Invalid or expired access token.");
         }
-        throw new ApiError(401, error.message || "Unauthorized request.");
+        throw new ApiError(401, error?.message || "Unauthorized request!");
     }
 });
 
