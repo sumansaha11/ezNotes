@@ -5,10 +5,9 @@ import { ApiError } from "../utils/ApiError.js";
 import { User } from "../models/user.model.js";
 
 const options = {
-    sameSite: 'None',
+    sameSite: 'Strict',
     path: '/',
     secure: true,
-    httpOnly: true,
 };
 
 const generateAccessAndRefreshTokens = async (userId) => {
