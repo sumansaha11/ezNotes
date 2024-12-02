@@ -1,17 +1,17 @@
-import JWT from "jsonwebtoken";
-import { asyncHandler } from "../utils/asyncHandler.js";
-import { ApiError } from "../utils/ApiError.js";
-import { User } from "../models/user.model.js";
+import JWT from 'jsonwebtoken';
+import { asyncHandler } from '../utils/asyncHandler.js';
+import { ApiError } from '../utils/ApiError.js';
+import { User } from '../models/user.model.js';
 
 export const verifyJWT = asyncHandler(async(req, _, next) => {
     try {
-        const accessToken = await req.cookies?.accessToken || req.header("Authorization")?.replace("Bearer ", "");
+        const accessToken = req.cookies?.accessToken || req.header("Authorization")?.replace("Bearer ", "");
 
         if (!accessToken) {
             throw new ApiError(401, "Unauthorized request");
         }
     
-        const decodedToken = await JWT.verify(accessToken, process.env.ACCESS_TOKEN_SECRET);
+        const decodedToken = JWT.verify(accessToken, process.env.ACCESS_TOKEN_SECRET);
     
         const user = await User.findById(decodedToken?._id).select(" -password -refreshToken");
     
