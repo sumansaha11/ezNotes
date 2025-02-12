@@ -36,7 +36,7 @@ const Toast = ({ isShown, message, type, onClose }) => {
                 </div>
             </div>
         </div>
-    );
+    )
 };
 
 export default Toast;

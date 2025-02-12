@@ -41,6 +41,6 @@ const NoteCard = ({
             </div>
         </div>
     )
-}
+};
 
-export default NoteCard
+export default NoteCard;

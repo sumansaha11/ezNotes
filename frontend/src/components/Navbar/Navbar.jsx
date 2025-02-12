@@ -43,7 +43,8 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
 
     if (userInfo) {
         return (
-            <div className="bg-blue-300 flex items-center justify-between px-6 py-2 drop-shadow"> <h2 className="text-xl font-medium text-black py-2">ezNotes</h2>
+            <div className="bg-blue-300 flex items-center justify-between px-6 py-2 drop-shadow">
+                <h2 className="text-lg md:text-xl font-medium text-black py-2">ezNotes</h2>
     
                 <SearchBar
                     value={searchQuery} onChange={({ target }) => {

@@ -9,7 +9,7 @@ import Toast from '../../components/ToastMessage/Toast.jsx';
 import EmptyCard from '../../components/EmptyCard/EmptyCard.jsx';
 import axiosInstance from '../../utils/axiosInstance.js';
 import AddNotesImg from "../../assets/images/add-notes.svg";
-import NoDataImg from "../../assets/images/no-data.svg"
+import NoDataImg from "../../assets/images/no-data.svg";
 
 const Home = () => {
 
@@ -137,7 +137,7 @@ const Home = () => {
 
             <div className="container mx-auto">
                 {allNotes.length > 0 ? (
-                    <div className="grid grid-cols-3 gap-4 mt-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 mx-3">
                         {allNotes.map((item, index) => (
                             <NoteCard
                                 key={item._id}
@@ -160,7 +160,7 @@ const Home = () => {
                 )}
             </div>
 
-            <button className="w-16 h-16 flex items-center justify-center rounded-2xl bg-primary hover:bg-blue-600 absolute right-10 bottom-10" onClick={() => {
+            <button className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-2xl bg-primary hover:bg-blue-600 fixed right-10 bottom-10" onClick={() => {
                 setOpenAddEditModal({ isShown: true, type: "add", data: null });
             }}>
                 <MdAdd className="text-[32px] text-white" />
@@ -175,7 +175,7 @@ const Home = () => {
                     },
                 }}
                 contentLabel=""
-                className="w-[40%] max-h-3/4 bg-white rounded-md mx-auto mt-14 p-5 overflow-scroll"
+                className="w-fit md:w-[40%] max-h-3/4 bg-white rounded-md mx-auto mt-14 p-5 overflow-scroll"
             >
                 <AddEditNotes
                     type={openAddEditModal.type}
@@ -195,7 +195,7 @@ const Home = () => {
                 onClose={handleCloseToast}
             />
         </>
-    );
+    )
 };
 
 export default Home;

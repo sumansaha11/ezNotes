@@ -61,7 +61,7 @@ const TagInput = ({ tags, setTags }) => {
                 </button>
             </div>
         </div>
-    );
+    )
 };
 
-export default TagInput
+export default TagInput;

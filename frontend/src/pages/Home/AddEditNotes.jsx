@@ -111,7 +111,7 @@ const AddEditNotes = ({ noteData, type, getAllNotes, onClose, showToastMessage }
                 {type === 'edit' ? 'UPDATE' : 'ADD'}
             </button>
         </div>
-    );
+    )
 };
 
 export default AddEditNotes;
