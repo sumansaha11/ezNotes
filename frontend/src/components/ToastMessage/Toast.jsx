@@ -14,7 +14,7 @@ const Toast = ({ isShown, message, type, onClose }) => {
 
     return (
         <div
-            className={`absolute top-16 right-5 transition-all duration-400 ${isShown ? "opacity-100" : "opacity-0"
+            className={`fixed top-16 right-5 transition-all duration-400 ${isShown ? "opacity-100" : "opacity-0"
                 }`}
         >
             < div
