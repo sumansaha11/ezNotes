@@ -51,7 +51,7 @@ const Login = () => {
             <Navbar />
 
             <div className="flex items-center justify-center mt-28">
-                <div className="w-80 md:w-96 border rounded bg-white px-7 py-10">
+                <div className="w-80 md:w-96 border border-blue-500 rounded bg-white px-7 py-10">
                     <form onSubmit={handleLogin}>
                         <h4 className="text-2xl mb-7">Login</h4>
 
@@ -82,6 +82,9 @@ const Login = () => {
                         </p>
                     </form>
                 </div>
+
+                <img className="absolute left-0 bottom-0 w-28 md:w-64 -z-10" src="/images/human-1.svg" alt="" />
+                <img className="absolute right-0 bottom-0 w-24 md:w-56 -z-10" src="/images/human-2.svg" alt="" />
             </div>
         </>
     );

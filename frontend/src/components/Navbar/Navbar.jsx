@@ -23,7 +23,7 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
             if (response.data && response.data.data) {
                 cookie.remove('accessToken', options);
                 cookie.remove('refreshToken', options);
-                navigate("/login");
+                navigate("/");
             }
         } catch (error) {
             console.log("Error while logging out user!");
@@ -44,7 +44,7 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
     if (userInfo) {
         return (
             <div className="bg-blue-900 flex items-center justify-between px-6 py-3 drop-shadow w-full top-0 fixed">
-                <h2 className="text-lg md:text-xl font-bold text-white py-2">ezNotes</h2>
+                <h2 onClick={() => navigate("/")} className="text-lg md:text-xl font-bold text-white py-2 cursor-pointer">ezNotes</h2>
 
                 <SearchBar
                     value={searchQuery} onChange={({ target }) => {
@@ -59,7 +59,7 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
         )
     } else {
         return (
-            <div className="bg-blue-900 flex items-center justify-between px-6 py-2 drop-shadow">
+            <div onClick={() => navigate("/")} className="bg-blue-900 flex items-center justify-between px-6 py-2 drop-shadow cursor-pointer">
                 <h2 className="text-xl font-bold text-white py-3">ezNotes</h2>
             </div>
         )

@@ -33,7 +33,7 @@ const LandingPage = () => {
             <img className="absolute left-0 bottom-0 w-40 md:w-64" src="/images/human-1.svg" alt="" />
             <img className="absolute right-0 bottom-0 w-32 md:w-56" src="/images/human-2.svg" alt="" />
 
-            <footer className="text-blue-900 mt-auto pb-4 text-sm md:text-base">
+            <footer className="text-blue-900 mt-auto pb-4 text-sm md:text-base z-10">
                 <p>&copy; 2025 ezNotes, Inc</p>
             </footer>
         </div>
