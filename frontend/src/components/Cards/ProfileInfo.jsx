@@ -9,8 +9,8 @@ const ProfileInfo = ({ userInfo, onLogout }) => {
             </div>
 
             <div>
-                <p className="text-xs md:text-sm font-medium">{userInfo?.fullname}</p>
-                <button className="text-xs md:text-sm text-slate-700 underline" onClick={onLogout}>
+                <p className="text-xs md:text-sm font-medium text-white">{userInfo?.fullname}</p>
+                <button className="text-xs md:text-sm text-slate-300 underline cursor-pointer" onClick={onLogout}>
                     Logout
                 </button>
             </div>

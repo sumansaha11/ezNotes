@@ -31,7 +31,7 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
     };
 
     const handleSearch = () => {
-        if(searchQuery) {
+        if (searchQuery) {
             onSearchNote(searchQuery);
         }
     };
@@ -43,9 +43,9 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
 
     if (userInfo) {
         return (
-            <div className="bg-blue-300 flex items-center justify-between px-6 py-2 drop-shadow w-full top-0 fixed">
-                <h2 className="text-lg md:text-xl font-medium text-black py-2">ezNotes</h2>
-    
+            <div className="bg-blue-900 flex items-center justify-between px-6 py-3 drop-shadow w-full top-0 fixed">
+                <h2 className="text-lg md:text-xl font-bold text-white py-2">ezNotes</h2>
+
                 <SearchBar
                     value={searchQuery} onChange={({ target }) => {
                         setSearchQuery(target.value);
@@ -53,13 +53,14 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
                     handleSearch={handleSearch}
                     onClearSearch={onClearSearch}
                 />
-    
+
                 <ProfileInfo userInfo={userInfo} onLogout={onLogout} />
             </div>
         )
     } else {
         return (
-            <div className="bg-blue-300 flex items-center justify-between px-6 py-2 drop-shadow"> <h2 className="text-xl font-medium text-black py-2">ezNotes</h2>
+            <div className="bg-blue-900 flex items-center justify-between px-6 py-2 drop-shadow">
+                <h2 className="text-xl font-bold text-white py-3">ezNotes</h2>
             </div>
         )
     }
