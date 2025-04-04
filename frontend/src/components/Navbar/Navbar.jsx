@@ -7,12 +7,14 @@ import { Cookies } from 'react-cookie';
 
 const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
 
-    const [searchQuery, setSearchQuery] = useState("")
+    const [searchQuery, setSearchQuery] = useState("");
+
     const navigate = useNavigate();
     const cookie = new Cookies();
 
     const options = {
         sameSite: 'Strict',
+        httpOnly: true,
         path: '/',
     };
 

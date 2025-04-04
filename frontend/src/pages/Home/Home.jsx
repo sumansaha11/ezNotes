@@ -160,7 +160,7 @@ const Home = () => {
                 )}
             </div>
 
-            <button className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-2xl bg-primary hover:bg-blue-600 fixed right-10 bottom-10" onClick={() => {
+            <button className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-full bg-primary hover:bg-blue-600 fixed right-10 bottom-10" onClick={() => {
                 setOpenAddEditModal({ isShown: true, type: "add", data: null });
             }}>
                 <MdAdd className="text-[32px] text-white" />
