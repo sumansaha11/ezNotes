@@ -43,7 +43,7 @@ const SignUp = () => {
                 },
             );
             if (response.data && response.data.data) {
-                navigate("/login");
+                navigate("/dashboard");
             }
         } catch (error) {
             const errorMessage = error.response?.data?.message || "Invalid login credentials!";
