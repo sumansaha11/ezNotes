@@ -20,7 +20,7 @@ const routes = (
 );
 
 const App = () => {
-  return <div>{routes}</div>;
+  return <div className="select-none">{routes}</div>;
 };
 
 export default App;
